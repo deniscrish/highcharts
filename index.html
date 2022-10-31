@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script> -->
+    <title>Polymedia</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+          This pie chart shows how the chart legend can be used to provide
+          information about the individual slices.
+        </p>
+      </figure> 
+    </div>
+  </body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <title>Polymedia</title>
+    <style type="text/css">
+      .highcharts-figure,
+.highcharts-data-table table {
+  min-width: 320px;
+  max-width: 660px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+    </style>
+  </head>
+  <figure class="highcharts-figure">
+    <div id="container"></div>
+  </figure>
+  <body>
+    <script type="text/javascript">
+Highcharts.chart('container', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: 'Распределение рынка браузеров, 2021'
+  },
+  tooltip: {
+    pointFormat: '<b>{point.percentage:.1f}%</b>'
+  },
+  accessibility: {
+    point: {
+      valueSuffix: '%'
+    }
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: false
+      },
+      showInLegend: true
+    }
+  },
+  series: [{
+    id: '"Серия 1"',
+      name: "Серия 1",
+      color: "rgba(102,187,106,1.00)",
+      marker: {
+        radius: 0.1,
+        states: {
+          select: {
+            radius: 5,
+          },
+          hover: {
+            radius: 5,
+          },
+        },
+      },
+    data: [
+        {
+          name: "Chrome",
+          names: ["Chrome"],
+          y: 61.41,
+        },
+        {
+          name: "Internet Explorer",
+          names: ["Internet Explorer"],
+          y: 11.84,
+        },
+        {
+          name: "Firefox",
+          names: ["Firefox"],
+          y: 10.85,
+        },
+        {
+          name: "Edge",
+          names: ["Edge"],
+          y: 4.67,
+        },
+        {
+          name: "Safari",
+          names: ["Safari"],
+          y: 4.18,
+        },
+        {
+          name: "Sogou Explorer",
+          names: ["Sogou Explorer"],
+          y: 1.64,
+        },
+        {
+          name: "Opera",
+          names: ["Opera"],
+          y: 1.6,
+        },
+        {
+          name: "QQ",
+          names: ["QQ"],
+          y: 1.2,
+        },
+        {
+          name: "Other",
+          names: ["Other"],
+          y: 2.61,
+        },
+      ],
+  }]
+});
+    </script>
+  </body>
+</html>
